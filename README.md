@@ -239,12 +239,19 @@ src/
 │   │   └── users/        # Kelola pengguna
 │   ├── dashboard/        # Dashboard admin pages
 │   │   ├── anggota/      # Manajemen anggota
+│   │   │   ├── tambah/    # Tambah anggota baru
+│   │   │   └── [id]/edit/ # Edit data anggota
 │   │   ├── struktur/     # Manajemen struktur organisasi
 │   │   ├── kegiatan/     # Manajemen kegiatan
+│   │   │   ├── tambah/   # Tambah kegiatan baru
+│   │   │   └── [id]/edit/ # Edit data kegiatan
 │   │   ├── keuangan/     # Manajemen keuangan
+│   │   │   ├── tambah/   # Catat transaksi baru
+│   │   │   └── [id]/edit/ # Edit transaksi
 │   │   ├── dokumen/      # Manajemen dokumen
 │   │   ├── surat/        # Halaman surat (coming soon)
 │   │   ├── pengumuman/   # Manajemen pengumuman
+│   │   │   └── tambah/   # Buat pengumuman baru
 │   │   ├── audit-log/    # Audit log viewer
 │   │   ├── pengaturan/   # Pengaturan aplikasi
 │   │   ├── layout.tsx    # Layout dengan sidebar navigasi

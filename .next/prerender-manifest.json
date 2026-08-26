@@ -146,6 +146,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/dashboard/anggota/tambah": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/anggota/tambah",
+      "dataRoute": "/dashboard/anggota/tambah.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/dashboard/audit-log": {
       "experimentalBypassFor": [
         {
@@ -218,6 +242,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/dashboard/kegiatan/tambah": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/kegiatan/tambah",
+      "dataRoute": "/dashboard/kegiatan/tambah.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/dashboard/keuangan": {
       "experimentalBypassFor": [
         {
@@ -233,6 +281,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/dashboard/keuangan",
       "dataRoute": "/dashboard/keuangan.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/dashboard/keuangan/tambah": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/keuangan/tambah",
+      "dataRoute": "/dashboard/keuangan/tambah.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -281,6 +353,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/dashboard/pengumuman",
       "dataRoute": "/dashboard/pengumuman.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/dashboard/pengumuman/tambah": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/pengumuman/tambah",
+      "dataRoute": "/dashboard/pengumuman/tambah.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -510,8 +606,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "5721a3411e043a7fab6ba010db4e6d8d",
-    "previewModeSigningKey": "a50b73c321b2f7556f4d963c8711ced64973814fb366bd3999976b09db5d9fbb",
-    "previewModeEncryptionKey": "9f86723eba1785317825e014f2625f41e1ad47344d5ad84ef16ac4ed44f59dfd"
+    "previewModeId": "688a69e48749f71cbcf4fd3d4bac19aa",
+    "previewModeSigningKey": "eb235f293ecb7efd27f01d09244f876391b53e541c0d84fc5e68d395c8430d69",
+    "previewModeEncryptionKey": "9fcae6a64d6c0b37692fb8d0fd1ce3639f502f006919e503d07bd55a15377bf7"
   }
 }

@@ -53,6 +53,30 @@
         "nxtPid": "nxtPid"
       },
       "namedRegex": "^/api/users/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/anggota/[id]/edit",
+      "regex": "^/dashboard/anggota/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/anggota/(?<nxtPid>[^/]+?)/edit(?:/)?$"
+    },
+    {
+      "page": "/dashboard/kegiatan/[id]/edit",
+      "regex": "^/dashboard/kegiatan/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/kegiatan/(?<nxtPid>[^/]+?)/edit(?:/)?$"
+    },
+    {
+      "page": "/dashboard/keuangan/[id]/edit",
+      "regex": "^/dashboard/keuangan/([^/]+?)/edit(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/keuangan/(?<nxtPid>[^/]+?)/edit(?:/)?$"
     }
   ],
   "staticRoutes": [
@@ -183,6 +207,12 @@
       "namedRegex": "^/dashboard/anggota(?:/)?$"
     },
     {
+      "page": "/dashboard/anggota/tambah",
+      "regex": "^/dashboard/anggota/tambah(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/anggota/tambah(?:/)?$"
+    },
+    {
       "page": "/dashboard/audit-log",
       "regex": "^/dashboard/audit\\-log(?:/)?$",
       "routeKeys": {},
@@ -201,10 +231,22 @@
       "namedRegex": "^/dashboard/kegiatan(?:/)?$"
     },
     {
+      "page": "/dashboard/kegiatan/tambah",
+      "regex": "^/dashboard/kegiatan/tambah(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/kegiatan/tambah(?:/)?$"
+    },
+    {
       "page": "/dashboard/keuangan",
       "regex": "^/dashboard/keuangan(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/dashboard/keuangan(?:/)?$"
+    },
+    {
+      "page": "/dashboard/keuangan/tambah",
+      "regex": "^/dashboard/keuangan/tambah(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/keuangan/tambah(?:/)?$"
     },
     {
       "page": "/dashboard/pengaturan",
@@ -217,6 +259,12 @@
       "regex": "^/dashboard/pengumuman(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/dashboard/pengumuman(?:/)?$"
+    },
+    {
+      "page": "/dashboard/pengumuman/tambah",
+      "regex": "^/dashboard/pengumuman/tambah(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/pengumuman/tambah(?:/)?$"
     },
     {
       "page": "/dashboard/struktur",
