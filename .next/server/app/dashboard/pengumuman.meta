@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/dashboard/layout,_N_T_/dashboard/pengumuman/layout,_N_T_/dashboard/pengumuman/page,_N_T_/dashboard/pengumuman"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/dashboard/pengumuman/__PAGE__",
+    "/dashboard/pengumuman",
+    "/dashboard",
+    "/_index",
+    "/_head"
+  ]
+}

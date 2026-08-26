@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { Users, Plus, Search, Edit2, Trash2, Eye, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -22,28 +22,26 @@ export default function AnggotaPage() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  useEffect(() => { fetchMembers(); }, [page, statusFilter]);
+  const fetchMembers = useCallback(() => {
+    const params = new URLSearchParams({ page: String(page), limit: "10" });
+    if (search) params.set("search", search);
+    if (statusFilter) params.set("status", statusFilter);
 
-  const fetchMembers = async () => {
-    setLoading(true);
-    try {
-      const params = new URLSearchParams({ page: String(page), limit: "10" });
-      if (search) params.set("search", search);
-      if (statusFilter) params.set("status", statusFilter);
-
-      const res = await fetch(`/api/members?${params}`);
-      if (res.ok) {
-        const data = await res.json();
+    fetch(`/api/members?${params}`)
+      .then((res) => res.json())
+      .then((data) => {
         setMembers(data.data || []);
         setTotalPages(data.pagination?.totalPages || 1);
-      }
-    } catch {}
-    setLoading(false);
-  };
+      })
+      .finally(() => setLoading(false));
+  }, [page, search, statusFilter]);
+
+  useEffect(() => { fetchMembers(); }, [fetchMembers]);
 
   const handleDelete = async (id: string) => {
     if (!confirm("Apakah Anda yakin ingin menghapus anggota ini?")) return;
     await fetch(`/api/members/${id}`, { method: "DELETE" });
+    setLoading(true);
     fetchMembers();
   };
 
@@ -69,7 +67,7 @@ export default function AnggotaPage() {
               placeholder="Cari nama atau nomor anggota..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && fetchMembers()}
+              onKeyDown={(e) => e.key === "Enter" && (setLoading(true), fetchMembers())}
               className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
             />
           </div>
@@ -84,7 +82,7 @@ export default function AnggotaPage() {
             <option value="pending">Pending</option>
             <option value="dikeluarkan">Dikeluarkan</option>
           </select>
-          <button onClick={fetchMembers} className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl font-medium">Cari</button>
+          <button onClick={() => { setLoading(true); fetchMembers(); }} className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl font-medium">Cari</button>
         </div>
       </div>
 
