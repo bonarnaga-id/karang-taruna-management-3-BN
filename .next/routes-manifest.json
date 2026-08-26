@@ -183,6 +183,18 @@
       "namedRegex": "^/dashboard/anggota(?:/)?$"
     },
     {
+      "page": "/dashboard/audit-log",
+      "regex": "^/dashboard/audit\\-log(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/audit\\-log(?:/)?$"
+    },
+    {
+      "page": "/dashboard/dokumen",
+      "regex": "^/dashboard/dokumen(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/dokumen(?:/)?$"
+    },
+    {
       "page": "/dashboard/kegiatan",
       "regex": "^/dashboard/kegiatan(?:/)?$",
       "routeKeys": {},
@@ -205,6 +217,18 @@
       "regex": "^/dashboard/pengumuman(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/dashboard/pengumuman(?:/)?$"
+    },
+    {
+      "page": "/dashboard/struktur",
+      "regex": "^/dashboard/struktur(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/struktur(?:/)?$"
+    },
+    {
+      "page": "/dashboard/surat",
+      "regex": "^/dashboard/surat(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/surat(?:/)?$"
     },
     {
       "page": "/galeri",

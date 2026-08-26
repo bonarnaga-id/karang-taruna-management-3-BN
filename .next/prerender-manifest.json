@@ -146,6 +146,54 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/dashboard/audit-log": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/audit-log",
+      "dataRoute": "/dashboard/audit-log.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/dashboard/dokumen": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/dokumen",
+      "dataRoute": "/dashboard/dokumen.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/dashboard/kegiatan": {
       "experimentalBypassFor": [
         {
@@ -233,6 +281,54 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/dashboard/pengumuman",
       "dataRoute": "/dashboard/pengumuman.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/dashboard/struktur": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/struktur",
+      "dataRoute": "/dashboard/struktur.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/dashboard/surat": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/surat",
+      "dataRoute": "/dashboard/surat.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -414,8 +510,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "f33516e6a5245003a5957ca454c87799",
-    "previewModeSigningKey": "21cd0e43695154606c880370c19f7cc6e845c7ccb4e4d475f529f3d86e8bb0b8",
-    "previewModeEncryptionKey": "d47f02320d3dd2e780318d1beb1cf90d2e5d89167dcb53fe4ee7e883ab57da39"
+    "previewModeId": "5721a3411e043a7fab6ba010db4e6d8d",
+    "previewModeSigningKey": "a50b73c321b2f7556f4d963c8711ced64973814fb366bd3999976b09db5d9fbb",
+    "previewModeEncryptionKey": "9f86723eba1785317825e014f2625f41e1ad47344d5ad84ef16ac4ed44f59dfd"
   }
 }
