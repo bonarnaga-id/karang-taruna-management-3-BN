@@ -57,7 +57,7 @@ export const appConfig = {
   permissions: {
     super_admin: [
       "manage_users", "manage_members", "manage_structure", "manage_activities",
-      "manage_finances", "approve_transactions", "manage_documents",
+      "manage_finances", "view_finances", "approve_transactions", "manage_documents",
       "manage_announcements", "manage_settings", "view_audit_log",
       "manage_attendance", "manage_notifications"
     ],
@@ -75,7 +75,7 @@ export const appConfig = {
       "manage_announcements", "manage_attendance", "manage_notifications"
     ],
     bendahara: [
-      "view_members", "manage_finances", "approve_transactions",
+      "view_members", "manage_finances", "view_finances", "approve_transactions",
       "view_financial_reports", "manage_notifications"
     ],
     koordinator: [

@@ -19,25 +19,41 @@ export default function KeuanganPage() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [summary, setSummary] = useState({ totalPemasukan: 0, totalPengeluaran: 0, saldo: 0 });
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/finance")
-      .then((r) => r.json())
+      .then((r) => {
+        if (!r.ok) {
+          return r.json().then((d) => {
+            throw new Error(d.error || "Gagal memuat data keuangan");
+          });
+        }
+        return r.json();
+      })
       .then((d) => {
         setTransactions(d.data || []);
         if (d.summary) setSummary(d.summary);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch((err) => {
+        setError(err.message || "Terjadi kesalahan saat memuat data");
+        setLoading(false);
+      });
   }, []);
 
   const handleApprove = async (id: string, action: string) => {
-    await fetch(`/api/finance/${id}`, {
+    const res = await fetch(`/api/finance/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ action })
     });
-    window.location.reload();
+    if (res.ok) {
+      window.location.reload();
+    } else {
+      const data = await res.json();
+      setError(data.error || "Gagal memproses transaksi");
+    }
   };
 
   return (
@@ -87,6 +103,11 @@ export default function KeuanganPage() {
 
         {loading ? (
           <div className="p-6 space-y-4 animate-pulse">{[...Array(5)].map((_, i) => <div key={i} className="h-14 bg-gray-100 rounded-lg" />)}</div>
+        ) : error ? (
+          <div className="p-6 text-center">
+            <DollarSign className="w-12 h-12 mx-auto text-red-300 mb-3" />
+            <p className="text-red-600">{error}</p>
+          </div>
         ) : transactions.length > 0 ? (
           <div className="overflow-x-auto">
             <table className="w-full">

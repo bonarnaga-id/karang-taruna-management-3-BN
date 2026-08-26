@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
     const auth = await requireAuth(request);
     if (auth.error) return auth.error;
 
-    if (!hasPermission(auth.user.role, "view_finances")) {
+    if (!hasPermission(auth.user.role, "view_finances") && !hasPermission(auth.user.role, "manage_finances")) {
       return NextResponse.json(
         { error: "Anda tidak memiliki akses untuk melihat data keuangan" },
         { status: 403 }
