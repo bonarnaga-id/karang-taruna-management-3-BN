@@ -248,10 +248,13 @@ src/
 │   │   ├── keuangan/     # Manajemen keuangan
 │   │   │   ├── tambah/   # Catat transaksi baru
 │   │   │   └── [id]/edit/ # Edit transaksi
+│   │   ├── kalender/     # Kalender kegiatan
+│   │   ├── presensi/     # Presensi kehadiran anggota
 │   │   ├── dokumen/      # Manajemen dokumen
 │   │   ├── surat/        # Halaman surat (coming soon)
 │   │   ├── pengumuman/   # Manajemen pengumuman
 │   │   │   └── tambah/   # Buat pengumuman baru
+│   │   ├── laporan-keuangan/ # Laporan keuangan
 │   │   ├── audit-log/    # Audit log viewer
 │   │   ├── pengaturan/   # Pengaturan aplikasi
 │   │   ├── layout.tsx    # Layout dengan sidebar navigasi

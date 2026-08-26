@@ -218,6 +218,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/dashboard/kalender": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/kalender",
+      "dataRoute": "/dashboard/kalender.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/dashboard/kegiatan": {
       "experimentalBypassFor": [
         {
@@ -314,6 +338,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/dashboard/laporan-keuangan": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/laporan-keuangan",
+      "dataRoute": "/dashboard/laporan-keuangan.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/dashboard/pengaturan": {
       "experimentalBypassFor": [
         {
@@ -377,6 +425,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/dashboard/pengumuman/tambah",
       "dataRoute": "/dashboard/pengumuman/tambah.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/dashboard/presensi": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/dashboard/presensi",
+      "dataRoute": "/dashboard/presensi.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -606,8 +678,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "688a69e48749f71cbcf4fd3d4bac19aa",
-    "previewModeSigningKey": "eb235f293ecb7efd27f01d09244f876391b53e541c0d84fc5e68d395c8430d69",
-    "previewModeEncryptionKey": "9fcae6a64d6c0b37692fb8d0fd1ce3639f502f006919e503d07bd55a15377bf7"
+    "previewModeId": "db187d552337e42b35626d32901f2def",
+    "previewModeSigningKey": "436a28d4912b4e83a8c591afcaa13d8c3b046455eeb3dfd8107b502b32c0fbc8",
+    "previewModeEncryptionKey": "f99abb97c6ebf02e52bb84bf522b58574662bd2f4fb0e13cfb5b850901da1b95"
   }
 }

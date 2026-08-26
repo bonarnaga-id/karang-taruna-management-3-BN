@@ -101,6 +101,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../src/app/dashboard/kalender/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/dashboard/kalender">> = Specific
+  const handler = {} as typeof import("../../src/app/dashboard/kalender/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/dashboard/kegiatan/[id]/edit/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/dashboard/kegiatan/[id]/edit">> = Specific
@@ -155,6 +164,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../src/app/dashboard/laporan-keuangan/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/dashboard/laporan-keuangan">> = Specific
+  const handler = {} as typeof import("../../src/app/dashboard/laporan-keuangan/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/dashboard/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/dashboard">> = Specific
@@ -186,6 +204,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/dashboard/pengumuman/tambah">> = Specific
   const handler = {} as typeof import("../../src/app/dashboard/pengumuman/tambah/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/dashboard/presensi/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/dashboard/presensi">> = Specific
+  const handler = {} as typeof import("../../src/app/dashboard/presensi/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

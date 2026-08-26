@@ -225,6 +225,12 @@
       "namedRegex": "^/dashboard/dokumen(?:/)?$"
     },
     {
+      "page": "/dashboard/kalender",
+      "regex": "^/dashboard/kalender(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/kalender(?:/)?$"
+    },
+    {
       "page": "/dashboard/kegiatan",
       "regex": "^/dashboard/kegiatan(?:/)?$",
       "routeKeys": {},
@@ -249,6 +255,12 @@
       "namedRegex": "^/dashboard/keuangan/tambah(?:/)?$"
     },
     {
+      "page": "/dashboard/laporan-keuangan",
+      "regex": "^/dashboard/laporan\\-keuangan(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/laporan\\-keuangan(?:/)?$"
+    },
+    {
       "page": "/dashboard/pengaturan",
       "regex": "^/dashboard/pengaturan(?:/)?$",
       "routeKeys": {},
@@ -265,6 +277,12 @@
       "regex": "^/dashboard/pengumuman/tambah(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/dashboard/pengumuman/tambah(?:/)?$"
+    },
+    {
+      "page": "/dashboard/presensi",
+      "regex": "^/dashboard/presensi(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/presensi(?:/)?$"
     },
     {
       "page": "/dashboard/struktur",
